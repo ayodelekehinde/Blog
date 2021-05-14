@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/blogFragment">
+
+
+    <fragment
+        android:id="@+id/blogFragment"
+        android:name="com.cherrio.blog.views.fragments.BlogFragment"
+        android:label="ViralTrend"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_blogsFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_blogFragment_to_favFragment"
+            app:destination="@id/favFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.cherrio.blog.views.fragments.DetailsFragment"
+        android:label="ViralTrend"
+        tools:layout="@layout/fragment_details">
+
+    <argument
+        android:name="detailFragmentArgs"
+        app:argType="com.cherrio.blog.models.Blog" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/favFragment"
+        android:name="com.cherrio.blog.views.fragments.FavFragment"
+        android:label="Favourites"
+        tools:layout="@layout/fragment_fav" >
+        <action
+            android:id="@+id/action_favFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+</navigation>

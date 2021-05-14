@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_save"
+        android:orderInCategory="100"
+        android:title="undo"
+        android:visible="false"
+        android:icon="@drawable/ic_save_selector"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_saved"
+        android:orderInCategory="200"
+        android:title="undo"
+        android:visible="false"
+        android:icon="@drawable/ic_saved_selector"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="300"
+        android:title="redo"
+        android:icon="@drawable/ic_share_selector"
+        app:showAsAction="always" />
+
+</menu>

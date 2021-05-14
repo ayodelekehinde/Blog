@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.cherrio.blog"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+dependencies {
+    def nav_version = "2.3.0-alpha05"
+    def archLifecycle = "2.2.0"
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation  'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.8.1'
+    implementation 'com.squareup.retrofit2:converter-simplexml:2.8.1'
+
+
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    implementation "androidx.lifecycle:lifecycle-runtime:$archLifecycle"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$archLifecycle"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$archLifecycle"
+    implementation "androidx.lifecycle:lifecycle-livedata:$archLifecycle"
+    //implementation "androidx.room:room-runtime:2.2.5"
+    //annotationProcessor "androidx.room:room-compiler:2.2.5"
+
+    implementation 'org.sufficientlysecure:html-textview:3.9'
+
+    implementation "androidx.paging:paging-runtime:2.1.2"
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'androidx.work:work-runtime:2.3.4'
+    implementation 'com.google.android.gms:play-services-ads:19.1.0'
+    implementation 'com.airbnb.android:lottie:3.4.0'
+
+    configurations{
+        all*.exclude group: 'xpp3', module: 'xpp3'
+        implementation.exclude group: "org.apache.httpcomponents", module: "httpclient"
+    }
+
+
+
+}

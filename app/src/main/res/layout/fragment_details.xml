@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textStyle="normal"
+            android:layout_margin="@dimen/five"
+            android:textAlignment="viewStart"
+            android:id="@+id/blog_headline"
+            android:text="This is blog requestkjbscjhcbvhsdvbjhvsjhdvj"/>
+
+
+        <com.cherrio.blog.utils.SquaredImage
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/blog_image"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_margin="@dimen/ten"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_marginTop="@dimen/fifteen"
+                android:layout_weight="3"
+                android:id="@+id/blog_date"
+                android:text="Tuesday 12 2000"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_marginTop="@dimen/fifteen"
+                android:id="@+id/blog_category"
+                android:textColor="@color/white"
+                android:background="@drawable/background"
+                android:text="Football"/>
+
+
+        </LinearLayout>
+
+        <org.sufficientlysecure.htmltextview.HtmlTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:textStyle="normal"
+            android:layout_margin="@dimen/five"
+            android:textAlignment="viewStart"
+            android:id="@+id/blog_content"
+            android:text="This is blog requestkjbscjhcbvhsdvbjhvsjhdvj"/>
+
+    </LinearLayout>
+
+
+</ScrollView>
